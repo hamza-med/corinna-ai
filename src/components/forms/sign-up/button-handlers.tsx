@@ -25,7 +25,7 @@ const ButtonHandler = (props: Props) => {
         </Button>
         <p>
           Already have an account?{" "}
-          <Link href="/auth/sing-in" className="font-bold">
+          <Link href="/auth/sign-in" className="font-bold">
             Sign In
           </Link>
         </p>
@@ -53,7 +53,7 @@ const ButtonHandler = (props: Props) => {
         </Button>
         <p>
           Already have an account?{" "}
-          <Link href="/auth/sing-in" className="font-bold">
+          <Link href="/auth/sign-in" className="font-bold">
             Sign In
           </Link>
         </p>
@@ -72,7 +72,7 @@ const ButtonHandler = (props: Props) => {
       </Button>
       <p>
         Already have an account?{" "}
-        <Link className="font-bold" href="/auth/sing-in">
+        <Link className="font-bold" href="/auth/sign-in">
           Sign In
         </Link>
       </p>

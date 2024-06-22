@@ -10,6 +10,10 @@ const DetailForm = dynamic(() => import("./account-details-form"), {
   ssr: false,
   loading: () => <Spinner />,
 });
+const OTPForm = dynamic(() => import("./otp-form"), {
+  ssr: false,
+  loading: () => <Spinner />,
+});
 
 type Props = {};
 
@@ -20,7 +24,7 @@ const RegistrationFormStep = (props: Props) => {
     setValue,
   } = useFormContext();
   const { currentStep } = useAuthContextHook();
-  const [onOTP, setOnOTP] = useState<string>();
+  const [onOTP, setOnOTP] = useState<string>('');
   const [onUserType, setOnUserType] = useState<"owner" | "student">("owner");
 
   setValue("otp", onOTP);
@@ -37,7 +41,7 @@ const RegistrationFormStep = (props: Props) => {
     case 2:
       return <DetailForm errors={errors} register={register} />;
     case 3:
-      return <OTPForm onOTP={onOTP} setOtp={setOnOTP} />;
+      return <OTPForm onOTP={onOTP} setOTP={setOnOTP} />;
   }
 };
 

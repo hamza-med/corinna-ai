@@ -6,7 +6,7 @@ import React from "react";
 type Props = {};
 
 const HighlightBar = (props: Props) => {
-  const { currentStep, setCurrentStep } = useAuthContextHook();
+  const { currentStep } = useAuthContextHook();
 
   return (
     <div className="grid grid-cols-3 gap-3">
